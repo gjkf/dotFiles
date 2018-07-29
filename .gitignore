@@ -2,7 +2,8 @@
 *
 
 #But this
-!*.bashrc
-!*.vim/
+!.vim/
 !*.vimrc
 !*.gitignore
+!.bash*
+.bash_history

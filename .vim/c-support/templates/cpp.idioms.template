@@ -1,0 +1,118 @@
+== Idioms.function == map:if, shortcut:f  ==
+// ===  FUNCTION  ======================================================================
+//         Name:  |?FUNCTION_NAME|
+//  Description:  
+// =====================================================================================
+void |FUNCTION_NAME|(<+argument_list+>){
+  return <+return_value+>;
+}
+// -----  end of function |FUNCTION_NAME|  -----
+== Idioms.function-static == map:isf, shortcut:t  ==
+// ===  FUNCTION  ======================================================================
+//         Name:  |?FUNCTION_NAME|
+//  Description:  
+// =====================================================================================
+static void |FUNCTION_NAME|(<+argument_list+>){
+  return <+return_value+>;
+}
+// -----  end of static function |FUNCTION_NAME|  -----
+== Idioms.main == map:im, shortcut:m  ==
+#include <stdlib.h>
+
+// ===  FUNCTION  ======================================================================
+//         Name:  main
+//  Description:  
+// =====================================================================================
+int main(int argc, char *argv[]){
+  <CURSOR>
+  return EXIT_SUCCESS;
+}
+// ----------  end of function main  ----------
+== Idioms.enum == map:ie, shortcut:e  ==
+enum |?ENUM_NAME|{
+  <CURSOR>
+};
+// ----------  end of enum |ENUM_NAME|  ----------
+== Idioms.struct == map:is, shortcut:s  ==
+struct |?STRUCT_NAME|{
+  <CURSOR>
+};
+// ----------  end of struct |STRUCT_NAME|  ----------
+== Idioms.union == map:iu, shortcut:u  ==
+union |?UNION_NAME|{
+  <CURSOR>
+};
+// ----------  end of union |UNION_NAME|  ----------
+== Idioms.scanf == map:isc, shortcut:s, insert  ==
+scanf("<CURSOR>", &);
+== Idioms.printf == map:ipr, shortcut:p, insert  ==
+printf("<CURSOR>\n");
+== Idioms.calloc == map:ica, shortcut:c  ==
+|?POINTER| = calloc((size_t)(<CURSOR><+COUNT+>), sizeof(<+TYPE+>));
+if(|POINTER| == NULL){
+  fprintf(stderr, "\ndynamic memory allocation failed\n");
+  exit (EXIT_FAILURE);
+}
+
+free(|POINTER|);
+|POINTER| = NULL;
+
+== Idioms.malloc == map:ima, shortcut:m  ==
+|?POINTER| = malloc(sizeof(<CURSOR><+TYPE+>));
+if(|POINTER| == NULL){
+  fprintf(stderr, "\ndynamic memory allocation failed\n");
+  exit(EXIT_FAILURE);
+}
+
+free(|POINTER|);
+|POINTER| = NULL;
+
+== Idioms.realloc == map:ire, shortcut:r  ==
+|?POINTER| = realloc(|POINTER|, sizeof(<CURSOR><+TYPE+>));
+if(|POINTER| == NULL){
+  fprintf(stderr, "\ndynamic memory reallocation failed\n");
+  exit(EXIT_FAILURE);
+}
+
+== Idioms.sizeof == map:isi, shortcut:s, insert  ==
+sizeof(<CURSOR><SPLIT>)
+== Idioms.assert == map:ias, shortcut:a, insert  ==
+assert(<CURSOR><SPLIT>);
+== Idioms.open-input-file == map:ii, shortcut:i  ==
+FILE* |?FILEPOINTER|;
+char* |FILEPOINTER|_file_name = "<CURSOR>";
+
+|FILEPOINTER| = fopen(|FILEPOINTER|_file_name, "r");
+if(|FILEPOINTER| == NULL){
+  fprintf(stderr, "couldn't open file '%s'; %s\n",
+          |FILEPOINTER|_file_name, strerror(errno));
+  exit(EXIT_FAILURE);
+}
+
+if(fclose(|FILEPOINTER|) == EOF){
+  fprintf(stderr, "couldn't close file '%s'; %s\n",
+          |FILEPOINTER|_file_name, strerror(errno));
+  exit(EXIT_FAILURE);
+}
+
+== Idioms.open-output-file == map:io, shortcut:o  ==
+FILE* |?FILEPOINTER|;
+char* |FILEPOINTER|_file_name = "<CURSOR>";
+
+|FILEPOINTER| = fopen(|FILEPOINTER|_file_name, "w");
+if(|FILEPOINTER| == NULL){
+  fprintf(stderr, "couldn't open file '%s'; %s\n",
+          |FILEPOINTER|_file_name, strerror(errno));
+  exit(EXIT_FAILURE);
+}
+
+if(fclose(|FILEPOINTER|) == EOF){
+  fprintf(stderr, "couldn't close file '%s'; %s\n",
+          |FILEPOINTER|_file_name, strerror(errno) );
+  exit(EXIT_FAILURE);
+}
+
+== Idioms.fprintf == map:ifpr, shortcut:f, insert  ==
+fprintf(|?FILEPOINTER|, "<CURSOR>\n", );
+== Idioms.fscanf == map:ifsc, shortcut:f, insert  ==
+fscanf(|?FILEPOINTER|, "<CURSOR>", &);
