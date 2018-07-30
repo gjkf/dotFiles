@@ -3,6 +3,7 @@
 
 #But this
 !.vim/
+!.vim/bundle/*
 !*.vimrc
 !*.gitignore
 !.bashrc

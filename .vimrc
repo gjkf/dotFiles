@@ -50,3 +50,5 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/bundle/youcompleteme/third_party/ycmd/
 let g:ycm_confirm_extra_conf = 1
 
 nmap <leader>tg :TagbarToggle<CR>
+
+set updatetime=100
