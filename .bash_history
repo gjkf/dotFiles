@@ -382,3 +382,28 @@ vim main.cpp
 exit
 vim .vimrc 
 exit
+gitplug 
+exit
+gitplug 
+exit
+gitplug 
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+gitplug .vim/bundle/vim-code-dark/
+exit
+blah one two
+exit
