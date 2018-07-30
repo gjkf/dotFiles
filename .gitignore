@@ -5,5 +5,5 @@
 !.vim/
 !*.vimrc
 !*.gitignore
-!.bash*
-.bash_history
+!.bashrc
+!*.bash_aliases
