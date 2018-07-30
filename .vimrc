@@ -7,6 +7,7 @@ set tabstop=8 softtabstop=0 expandtab shiftwidth=2 smarttab
 set backspace=indent,eol,start
 set showcmd
 set showmatch
+set updatetime=100
 
 set colorcolumn=90
 let &colorcolumn=join(range(91,999),",")
@@ -51,4 +52,18 @@ let g:ycm_confirm_extra_conf = 1
 
 nmap <leader>tg :TagbarToggle<CR>
 
-set updatetime=100
+nmap <leader>nn :NERDTreeToggle<CR>
+
+
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ 'Ignored'   : '☒',
+    \ "Unknown"   : "?"
+    \ }
