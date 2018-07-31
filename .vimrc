@@ -8,6 +8,7 @@ set backspace=indent,eol,start
 set showcmd
 set showmatch
 set updatetime=100
+set textwidth=88
 
 set colorcolumn=90
 let &colorcolumn=join(range(91,999),",")
@@ -43,7 +44,6 @@ let g:tex_flavor = "latex"
 let g:UltiSnipsExpandTrigger="<c-l>"
 let g:UltiSnipsJumpForwardTrigger="<c-b>"
 let g:UltiSnipsJumpBackwardTrigger="<c-z>"
-
 " If you want :UltiSnipsEdit to split your window.
 let g:UltiSnipsEditSplit="vertical"
 
@@ -53,7 +53,7 @@ let g:ycm_confirm_extra_conf = 1
 nmap <leader>tg :TagbarToggle<CR>
 
 nmap <leader>nn :NERDTreeToggle<CR>
-
+let NERDTreeShowHidden=1
 
 let g:NERDTreeIndicatorMapCustom = {
     \ "Modified"  : "✹",
@@ -67,3 +67,6 @@ let g:NERDTreeIndicatorMapCustom = {
     \ 'Ignored'   : '☒',
     \ "Unknown"   : "?"
     \ }
+
+let g:tagbar_sort = 0
+let g:tagbar_autoshowtag = 1
