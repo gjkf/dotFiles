@@ -67,7 +67,7 @@ function WriteCMakeLists()
   " I need this uglyness else an extra ',' is printed and breakes the program
   let print = lines[0] . "\n"
   for i in range(1,len(lines)-3)
-    let print = print . lines[i] . ",\n"
+    let print = print . lines[i] . "\n"
   endfor
   let print = print . lines[len(lines)-2] . "\n"
   let print = print . lines[len(lines)-1]

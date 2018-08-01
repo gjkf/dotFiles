@@ -17,7 +17,7 @@ static void |FUNCTION_NAME|(<+argument_list+>){
 }
 // -----  end of static function |FUNCTION_NAME|  -----
 == Idioms.main == map:im, shortcut:m  ==
-#include <stdlib.h>
+#include <iostream>
 
 // ===  FUNCTION  ======================================================================
 //         Name:  main
