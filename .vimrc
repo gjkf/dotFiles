@@ -70,3 +70,7 @@ let g:NERDTreeIndicatorMapCustom = {
 
 let g:tagbar_sort = 0
 let g:tagbar_autoshowtag = 1
+
+let g:pymode_python = 'python3'
+
+let g:pydoc_cmd = '/usr/bin/pydoc3.6'
